@@ -30,11 +30,11 @@
                android:name="android.nfc.action.TECH_DISCOVERED"
                android:resource="@xml/nfc_filter" />
             <intent-filter>
-            <intent-filter>
                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
                <category android:name="android.intent.category.DEFAULT" />
                <data android:scheme="hguapp" />
            </intent-filter>
+           <intent-filter>
                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
                <category android:name="android.intent.category.DEFAULT" />
                <data android:scheme="scampus" />
