@@ -25,13 +25,26 @@
                 <param name="android-package" value="com.napolitano.cordova.plugin.intent.IntentPlugin"/>
             </feature>
         </config-file>
-
+        <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
+           <meta-data
+               android:name="android.nfc.action.TECH_DISCOVERED"
+               android:resource="@xml/nfc_filter" />
+            <intent-filter>
+            <intent-filter>
+               <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+               <category android:name="android.intent.category.DEFAULT" />
+               <data android:scheme="hguapp" />
+           </intent-filter>
+               <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+               <category android:name="android.intent.category.DEFAULT" />
+               <data android:scheme="scampus" />
+           </intent-filter>
+        </config-file>
         <js-module src="www/android/IntentPlugin.js" name="IntentPlugin">
             <clobbers target="IntentPlugin" />
         </js-module>
-
         <source-file src="src/android/IntentPlugin.java" target-dir="src/com/napolitano/cordova/plugin/intent" />
-
+        <source-file src="res/nfc_filter.xml" target-dir="res/xml" />
     </platform>
 
 </plugin>
