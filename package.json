@@ -3,7 +3,7 @@
   "version": "0.1.3",
   "description": "Cordova Plugin for Android to access intent",
   "cordova": {
-    "id": "cordova-plugin-intent",
+    "id": "com.napolitano.cordova.plugin.intent",
     "platforms": [
       "android"
     ]
